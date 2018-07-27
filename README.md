@@ -74,7 +74,7 @@ After generating this file containing cells to jam, you can launch the RPC clien
 $ python smartjam_rpcclient.py -f cells_<generated timestamp>.json
 ```
 
-Then leverage the gain for transmission and you should observe that a lot of noise is overflowing the targeted cells.
+Then leverage the gain for transmission and you should observe that a lot of noise is overflowing the targeted cells with gaussian noise.
 
 ![Jamming session](https://raw.githubusercontent.com/Synacktiv/Modmobjam/master/imgs/jamming_session.png)
 

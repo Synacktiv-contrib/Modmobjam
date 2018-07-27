@@ -23,15 +23,15 @@ You should be warned that Jamming is illegal and you're responsible for any dama
 
 If you have a HackRF or any device compatible with osmocom drivers, you can directly run the code provided in ``GRC/jammer_gen.py`` as follows:
 
-``sh
+```sh
 $ python GRC/jammer_gen.py
-``
+```
 
 For those who want to use another device like USRP, edit the GNU Radio block schema ``GRC/jammer_gen.grc``:
 
-``sh
+```sh
 $ gnuradio-companion GRC/jammer_gen.grc
-``
+```
 
 Then you can configure the central frequency with the WX GUI to target a frequency. But this tool has also a feature to do it automatically.
 
@@ -39,7 +39,7 @@ Then you can configure the central frequency with the WX GUI to target a frequen
 
 To automate jamming, you can first get a list of we the [Modmobmap](https://github.com/Synacktiv/Modmobmap) that saves a JSON file after monitoring surrounding cells in a precise location. This JSON file looks as follows:
 
-``sh
+```sh
 $ cat cells_<generated timestamp>.json 
 {
     "****-***50": {
@@ -66,13 +66,13 @@ $ cat cells_<generated timestamp>.json
     },
     [...] 
 }
-``
+```
 
 After generating this file containing cells to jam, you can launch the RPC client that communicate with ``GRC/jammer_gen.py`` as follows:
 
-``sh
+```sh
 python smartjam_rpcclient.py -f cells_<generated timestamp>.json
-``
+```
 
 Then leverage the gain for transmission and you should observe that a lot of noise is overflowing the targeted cells.
 

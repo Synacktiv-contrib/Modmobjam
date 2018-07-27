@@ -71,7 +71,7 @@ $ cat cells_<generated timestamp>.json
 After generating this file containing cells to jam, you can launch the RPC client that communicate with ``GRC/jammer_gen.py`` as follows:
 
 ```sh
-python smartjam_rpcclient.py -f cells_<generated timestamp>.json
+$ python smartjam_rpcclient.py -f cells_<generated timestamp>.json
 ```
 
 Then leverage the gain for transmission and you should observe that a lot of noise is overflowing the targeted cells.

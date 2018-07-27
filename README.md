@@ -7,7 +7,7 @@ For more information, this little tool has been presented during SSTIC rump 2018
 - english slides: https://www.synacktiv.com/ressources/sstic_rump_2018_modmobjam.pdf
 - french presentation: https://static.sstic.org/rumps2018/SSTIC_2018-06-14_P10_RUMPS_22.mp4
 
-## Warning
+## Warning
 
 You should be warned that Jamming is illegal and you're responsible for any damages when using it on your own.
 
@@ -19,7 +19,7 @@ You should be warned that Jamming is illegal and you're responsible for any dama
 
 ## Usage
 
-### Manual jamming 
+### Manual jamming 
 
 If you have a HackRF or any device compatible with osmocom drivers, you can directly run the code provided in ``GRC/jammer_gen.py`` as follows:
 
@@ -35,7 +35,7 @@ $ gnuradio-companion GRC/jammer_gen.grc
 
 Then you can configure the central frequency with the WX GUI to target a frequency. But this tool has also a feature to do it automatically.
 
-### Automatic smartjamming
+### Automatic smartjamming
 
 To automate jamming, you can first get a list of we the [Modmobmap](https://github.com/Synacktiv/Modmobmap) that saves a JSON file after monitoring surrounding cells in a precise location. This JSON file looks as follows:
 
@@ -76,34 +76,6 @@ python smartjam_rpcclient.py -f cells_<generated timestamp>.json
 
 Then leverage the gain for transmission and you should observe that a lot of noise is overflowing the targeted cells.
 
-Please note that the delay between each targeted cell can be set with the provided arguments.
+![Jamming session](https://raw.githubusercontent.com/Synacktiv/Modmobjam/master/imgs/jamming_session.png)
 
-## Arguments
-
-``bash
-$ python smartjam_rpcclient.py -h                                                                                                                                                                            2 ↵
-usage: smartjam_rpcclient.py [-h] [-s HOST] [-p PORT] -f FILEPATH [-d DELAY]
-                             [-b BANDWIDTH] [-l LINKJAM] [-w FILTERPLMN]
-
-Modmodjam - Software-Defined Radio Jammer
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -s HOST, --host HOST  hostname to send RPC commands (default: "localhost")
-  -p PORT, --port PORT  RPC server port (e.g: 8888 by default)
-  -f FILEPATH, --file FILEPATH
-                        Modmobmap json file
-  -d DELAY, --delay DELAY
-                        Delay between each frequency to jam in sec (default:
-                        2)
-  -b BANDWIDTH, --bandwidth BANDWIDTH
-                        Define a static bandwidth. Will also influence the
-                        sample rate. By default it will use the bandwidth of
-                        the JSON file
-  -l LINKJAM, --linkjam LINKJAM
-                        Link to jam: "0" for downlink and "1" for uplink
-                        (default: "0")
-  -w FILTERPLMN, --filterplm FILTERPLMN
-                        PLMN to filter. Example: 2082-1 (separated with
-                        commas)
-``
+Please note that the delay between each targeted cell can be set with a provided arguments '-d' (see arguments helper). 

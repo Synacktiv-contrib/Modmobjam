@@ -1,6 +1,10 @@
+# Suppport 
+
+This repository is not longer maintened by his original creator. Please use the following link instead: https://github.com/PentHertz/Modmobmap
+
 # Modmobjam
 
-A smart jamming proof of concept for mobile equipments that could be powered with [Modmobmap](https://github.com/Synacktiv/Modmobmap)
+A smart jamming proof of concept for mobile equipments that could be powered with [Modmobmap](https://github.com/PentHertz/Modmobmap)
 
 For more information, this little tool has been presented during SSTIC rump 2018:
 
@@ -15,7 +19,7 @@ You should be warned that Jamming is illegal and you're responsible for any dama
 
 - a radio devices that is enabled to transmit signal (HackRF, USRP, bladeRF, and so on.)
 - GNU Radio installed
-- Modmobmap to perform automatic smartjamming: https://github.com/Synacktiv/Modmobmap
+- Modmobmap to perform automatic smartjamming: https://github.com/PentHertz/Modmobmap
 
 ## Usage
 
